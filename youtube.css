@@ -1,0 +1,208 @@
+.top{
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+.top img{
+    height: 75%;
+    width: auto;
+    max-width: 30%;
+    flex-shrink: 1;
+}
+.top img:nth-child(2){
+    height: 80%;
+    width: auto;
+}
+.left{
+    background-color: gray;
+    width: 15vw;
+    height: 90vh;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+    
+}
+.left2{
+    display: none;
+    background-color: pink;
+    width: 15vw;
+    height: 90vh;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left2 img{
+    height: 100%;
+    width: 100%;
+}
+.top2{
+    width: 82vw;
+    height: 10vh;
+    position: absolute;
+    left: 18vw;
+    top:10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.top2 img{
+    width: auto;
+    height: 60%;
+    max-width: 10%;
+    flex-shrink: 1;
+}
+.container{
+    width: 83vw;
+    height: 85vh;
+    position: absolute;
+    left: 17vw;
+    top:15vh;
+    display: grid;
+    overflow: hidden;
+}
+.item1{
+    grid-area: item1;
+    background-color: aliceblue;
+    display: flex;
+}
+.item2{
+    grid-area: item2;
+    background-color: antiquewhite;
+    display: flex;
+}
+.item3{
+    grid-area: item3;
+    background-color: aqua;
+    display: flex;
+}
+.item4{
+    grid-area: item4;
+    background-color: aquamarine;
+    display: flex;
+}
+.item5{
+    grid-area: item5;
+    background-color: azure;
+    display: flex;
+}
+.item6{
+    grid-area: item6;
+    background-color: beige;
+    display: flex;
+}
+.item7{
+    grid-area: item7;
+    background-color: blueviolet;
+    display: flex;
+}
+.item8{
+    grid-area: item8;
+    background-color: brown;
+    display: flex;
+}
+.item9{
+    grid-area: item9;
+    background-color: chocolate;
+    display: flex;
+    display: none;
+}
+.item1 img, 
+.item2 img, 
+.item3 img, 
+.item4 img, 
+.item5 img, 
+.item6 img, 
+.item7 img, 
+.item8 img, 
+.item9 img {
+    width: 100%;   
+    height: 100%;  
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+    .container{
+        grid-template-areas: 
+        "item1 item2 item3"
+        "item4 item5 item6"
+        "item7 item8 item9";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .top{
+
+    }
+    .left2{
+        width: 7vw;
+    }
+    .top2{
+        width: 92vw;
+        left:8vw;
+    }
+    .container{
+        width: 93vw;
+        left: 7vw;
+    }
+    .item9{
+        display: block;
+    }
+    .left{
+        display: none;
+    }
+    .left2{
+        display:block;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px){
+    .container{
+        grid-template-areas: 
+        "item1 item2 item3"
+        "item4 item5 item6"
+        "item7 item8 item9";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .item9{
+        display: block;
+    }
+    .left2{
+        display: none;
+    }
+    .left{
+        display: block;
+    }
+}
+
+@media (min-width: 1536px){
+    .container{
+        grid-template-areas: 
+        "item1 item2 item3 item4"
+        "item5 item6 item7 item8";
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .item9{
+        display: none;
+    }
+    .left2{
+        display: none;
+    }
+    .left{
+        display: block;
+    }
+}
